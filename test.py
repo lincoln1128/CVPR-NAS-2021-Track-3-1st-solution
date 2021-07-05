@@ -1,7 +1,5 @@
 import os, sys
 
-sys.path.append('EfficientNet-PyTorch-master/')
-
 import torch.nn as nn
 import torchvision
 
@@ -21,7 +19,7 @@ from resnet_search import  ResNet_search, CHANNELS, LAYERS, RESOLUTION, AUG
 from arch_model import arch_model
 import time
 
-os.environ["CUDA_VISIBLE_DEVICES"] = '3'
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 def normalization(data, dim):
     _range = torch.max(data, dim)[0] - torch.min(data, dim)[0]
